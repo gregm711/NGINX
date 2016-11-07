@@ -1,0 +1,56 @@
+# NGINX Course Udemy
+capabilities
+* Reverse proxy
+* load balancing
+* cacheing
+
+## HTTP Protocol
+### GET
+* request
+* Host
+
+### Partial GET
+* Only used with HTTP 1.1 Protocol
+* range bytes = 0-1024      only get first mb of file
+
+### Conditional GET
+* normal get with…
+* If-Modified-Since   date   only return if file has been modified after date
+
+### POST
+*  url
+* host
+* content type  ex.  application/json
+
+### Head 
+* Date
+* Content-type ex text/html
+* Content-Length in bytes
+* Cache control: public -> not catchable by browsers 
+
+### Trace
+* used for debugging
+* see what is sent vs what was recieved
+* not allowed on nginx
+
+### Options
+* Allow only certain request methods on specific files. ex: login would be POST
+
+### Staus codes
+* 100-199 Informational status codes
+* 200-299 Succes Status Codes
+* 300-399 Redirection status codes
+* 400-499 Client Error status codes
+* 500-599 Server Error status code
+
+
+### Helpful nginx commands
+* ps -ef --forest | grep nginx    - view all spawnded  nginx proceess
+ * netstat -ntlp | grep nginx    - view where on network nginx is  running
+ * nginx -t      - checks nginx configuration file 
+
+### NGINX Process and Configuration
+*  1 Master Process & worker Process
+* set worker_process to auto or # of cpu cores
+* worker_connections  maximum number of connections a worker can handle
+* 
